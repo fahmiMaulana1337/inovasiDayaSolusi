@@ -1,0 +1,19 @@
+Buatlah aplikasi API menggunakan bahasa berbasis OOP(contoh: java, c#), dengan requirement sebagai berikut:
+- Protocol: HTTP
+- Data: JSON
+- Method: GET
+- Response, sesuai pada file "viewData.json"
+- Logic aplikasi mengambil data dari database(contoh: mysql, sql server, postgre, atau lainnya)
+- Struktur database dan table bisa dibuat sesuai respon yang akan ditampilkan pada API
+
+
+Buatlah aplikasi berbasis web
+1. Consume json pada file json yg telah disediakan
+2. Tampilkan di grid table -> data digrouping berdasar tahun & bulan
+3. Page Add data
+4. Page Edit data
+5. View detail data
+Note: buat dengan bahasa yg dikuasai(jika bisa menggunakan react.js)
+Waktunya 24 jam
+Code bisa dishare via github
+Siapkan jg demo hasil jadi aplikasi yg sudah dibuat
