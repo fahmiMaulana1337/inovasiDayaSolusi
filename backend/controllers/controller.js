@@ -17,7 +17,7 @@ class Controller {
     static async getDataProductById(req, response) {
         try {
             const id = req.params.id
-            const data = await Product.findAll({
+            const data = await Product.findOne({
                 where: {
                     id: id
                 },
@@ -32,8 +32,20 @@ class Controller {
     }
     static async addDataProduct(req, response) {
         try {
-            const { productID, productName, amount, customerName, status, transactionDate, createBy, createOn } = req.body;
+
+            const id = await Product.findOne(
+                {
+                    order:[['id','DESC']],
+                    limit:1
+                }
+            )
+            console.log(id.id)
+            let { productID, productName, amount, customerName, status, transactionDate, createBy } = req.body;
+            const createOn = new Date();
+            amount= String(amount).replace(/[^0-9]/g, '');
+           
             const data = await Product.create({
+                id:id.id+1,
                 productID,
                 productName,
                 amount,
